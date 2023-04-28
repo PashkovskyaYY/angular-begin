@@ -9,5 +9,5 @@ export class AppComponent {
   title = 'angular-begin';
   inputValueStr = ""
   show = true
-
+  arr: Array<number> = [1, 2, 3, 4, 5, 10, 23]
 }
