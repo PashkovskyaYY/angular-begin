@@ -8,6 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-begin';
   inputValueStr = ""
-  show = true
-  arr: Array<number> = [1, 2, 3, 4, 5, 10, 23]
+  num: number = 4.5
 }
