@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-begin';
   inputValueStr = ""
+  changeBackground = false
 
   image = "https://www.worldatlas.com/r/w1200/upload/c7/91/96/shutterstock-109340948.jpg"
 

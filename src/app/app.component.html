@@ -3,4 +3,9 @@
 <!--<button (click)="changeTitleAndImg()">Change title and img</button>-->
 <!--<img [src]="image" class = "cat">-->
 <input type="text" [(ngModel)]="inputValueStr">
-<p>{{inputValueStr}}</p>
+<button (click)="changeBackground = !changeBackground">Change paragraph background</button>
+<p [ngStyle]="{
+    background: changeBackground ? 'red' : 'grey',
+    border: '1px solid black',
+    height: '30px'
+}">{{inputValueStr}}</p>
