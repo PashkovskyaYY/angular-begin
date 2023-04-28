@@ -16,11 +16,15 @@ export class AppComponent {
   inputValueStr = ""
   posts: Post[] = [
     {id: 1, title: 'First card', text: 'description'},
-    {id: 2, title: 'Second card', text: 'description'},
-    {id: 3, title: 'Third card', text: 'description'}
+    // {id: 2, title: 'Second card', text: 'description'},
+    // {id: 3, title: 'Third card', text: 'description'}
   ]
 
   deletePost(event: Post) {
     this.posts = this.posts.filter((post: Post) => post.id !== event.id)
+  }
+
+  changePost(){
+    this.posts[0].title = 'Changed card'
   }
 }
