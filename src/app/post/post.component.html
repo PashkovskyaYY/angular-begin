@@ -1,4 +1,5 @@
 <div class="card">
-  <h1>{{title}}</h1>
-  <p>{{text}}</p>
+  <h1>{{post.title}}</h1>
+  <p>{{post.text}}</p>
+  <button (click)="deletePost(post)">Delete post</button>
 </div>

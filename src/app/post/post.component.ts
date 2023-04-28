@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Post} from "../app.component";
 
 @Component({
   selector: 'app-post',
@@ -7,6 +8,10 @@ import {Component, Input} from '@angular/core';
 })
 export class PostComponent {
 
-  @Input() title = ''
-  @Input() text = ''
+  @Input() post: any
+  @Output() deleteEvent: EventEmitter<Post> = new EventEmitter<Post>()
+
+  deletePost(post: Post) {
+    this.deleteEvent.emit(post)
+  }
 }
