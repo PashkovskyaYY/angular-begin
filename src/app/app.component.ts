@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {CommunicationService} from "./communication.service";
 
 export interface Post{
   id: number;
@@ -18,18 +19,17 @@ export class AppComponent implements OnInit{
   inputValueStr = ""
   posts: Post[] = []
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private service: CommunicationService) {
 
   }
-
 
   deletePost(event: Post) {
     this.posts = this.posts.filter((post: Post) => post.id !== event.id)
   }
 
   ngOnInit(): void {
-    this.httpClient.get<Post[]>('https://jsonplaceholder.typicode.com/posts').subscribe((value) =>  {
-    this.posts = value
+    this.service.getPosts().subscribe((value) => {
+      this.posts = value
     })
   }
 }
